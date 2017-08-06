@@ -1,5 +1,10 @@
 
 <p>
+  <strong>Brand:</strong>
+  <%= @product.brand.name %>
+</p>
+ 
+<p>
   <strong>Title:</strong>
   <%= @product.name %>
 </p>
@@ -15,4 +20,4 @@
   <strong>Price:</strong>
   <%= @product.price %>
 </p>
- 
+ <%= link_to 'List of product', products_path %>

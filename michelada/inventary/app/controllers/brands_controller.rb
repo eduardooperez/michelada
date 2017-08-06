@@ -9,6 +9,7 @@ class BrandsController < ApplicationController
  
   def new
     @brand = Brand.new
+    @products = Product.all
   end
  
   def edit
@@ -18,7 +19,7 @@ class BrandsController < ApplicationController
   def create
     @brand = Brand.new(brand_params)
  
-    if @brand.save
+    if @brand.save!
       redirect_to @brand
     else
       render 'new'
